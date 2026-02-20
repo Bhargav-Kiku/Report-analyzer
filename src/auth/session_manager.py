@@ -56,31 +56,31 @@ class SessionManager:
         <script>
         // Check if user data exists in localStorage on page load
         window.addEventListener('DOMContentLoaded', function() {
-            const storedAuth = localStorage.getItem('hia_auth');
+            const storedAuth = localStorage.getItem('ra_auth');
             if (storedAuth) {
                 try {
                     const authData = JSON.parse(storedAuth);
                     // Set a flag that Python can check
-                    window.hia_auth_data = authData;
+                    window.ra_auth_data = authData;
                 } catch (e) {
-                    localStorage.removeItem('hia_auth');
+                    localStorage.removeItem('ra_auth');
                 }
             }
         });
         
         // Function to save auth data
         window.saveAuthData = function(authData) {
-            localStorage.setItem('hia_auth', JSON.stringify(authData));
+            localStorage.setItem('ra_auth', JSON.stringify(authData));
         };
         
         // Function to clear auth data
         window.clearAuthData = function() {
-            localStorage.removeItem('hia_auth');
+            localStorage.removeItem('ra_auth');
         };
         
         // Function to get auth data
         window.getAuthData = function() {
-            const stored = localStorage.getItem('hia_auth');
+            const stored = localStorage.getItem('ra_auth');
             return stored ? JSON.parse(stored) : null;
         };
         </script>
