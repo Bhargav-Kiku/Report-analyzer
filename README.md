@@ -4,6 +4,8 @@
   <em>An AI-powered personal health insights agent.</em>
 </p>
 
+[**View the Deployed Application**](https://medical-report-analyzer-kiku.streamlit.app/)
+
 ## Overview
 **Report Analyzer** allows users to upload medical blood reports in PDF format, performs a detailed AI analysis of the results, and provides a RAG-based (Retrieval-Augmented Generation) chat interface for follow-up questions. It uses a tiered AI model approach to provide insights securely and efficiently.
 
