@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: report-analyzer
+    env: docker
+    plan: free # Change to starter/standard for more resources
+    branch: main
+    dockerCommand: streamlit run src/main.py --server.port=$PORT --server.address=0.0.0.0
+    envVars:
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_KEY
+        sync: false
+      - key: GROQ_API_KEY
+        sync: false
